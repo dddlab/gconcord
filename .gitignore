@@ -1,0 +1,7 @@
+inst/doc
+doc
+Meta
+.Rhistory
+.RData
+.Rproj.user
+.ipynb_checkpoints/

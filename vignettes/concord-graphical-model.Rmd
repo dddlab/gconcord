@@ -1,0 +1,19 @@
+---
+title: "concord-graphical-model"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{concord-graphical-model}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(gconcord)
+```
