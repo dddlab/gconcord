@@ -18,3 +18,39 @@ qwer <- function(x, y) {
     .Call(`_gconcord_qwer`, x, y)
 }
 
+#' Mapping R matrix  
+#' 
+#' @param x A single integer.
+#' @export
+wrapper_1 <- function(M, multiplier) {
+    invisible(.Call(`_gconcord_wrapper_1`, M, multiplier))
+}
+
+#' wrapper 2
+#' 
+#' @param x A single integer.
+#' @export
+wrapper_2 <- function(Ms, multiplier) {
+    invisible(.Call(`_gconcord_wrapper_2`, Ms, multiplier))
+}
+
+#' wrapper 3
+#' 
+#' @param x A single integer.
+#' @export
+wrapper_3 <- function(M, multiplier) {
+    .Call(`_gconcord_wrapper_3`, M, multiplier)
+}
+
+#' Does not modify input matrix
+#' @export
+wrapper_4 <- function(M, multiplier) {
+    .Call(`_gconcord_wrapper_4`, M, multiplier)
+}
+
+#' Does not modify input matrix
+#' @export
+wrapper_5 <- function(M, Msp, multiplier) {
+    invisible(.Call(`_gconcord_wrapper_5`, M, Msp, multiplier))
+}
+

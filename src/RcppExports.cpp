@@ -29,10 +29,73 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// wrapper_1
+void wrapper_1(Eigen::Map<Eigen::MatrixXd> M, double multiplier);
+RcppExport SEXP _gconcord_wrapper_1(SEXP MSEXP, SEXP multiplierSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Eigen::Map<Eigen::MatrixXd> >::type M(MSEXP);
+    Rcpp::traits::input_parameter< double >::type multiplier(multiplierSEXP);
+    wrapper_1(M, multiplier);
+    return R_NilValue;
+END_RCPP
+}
+// wrapper_2
+void wrapper_2(Rcpp::NumericMatrix Ms, double multiplier);
+RcppExport SEXP _gconcord_wrapper_2(SEXP MsSEXP, SEXP multiplierSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::NumericMatrix >::type Ms(MsSEXP);
+    Rcpp::traits::input_parameter< double >::type multiplier(multiplierSEXP);
+    wrapper_2(Ms, multiplier);
+    return R_NilValue;
+END_RCPP
+}
+// wrapper_3
+double wrapper_3(Eigen::Map<Eigen::SparseMatrix<double> > M, double multiplier);
+RcppExport SEXP _gconcord_wrapper_3(SEXP MSEXP, SEXP multiplierSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Eigen::Map<Eigen::SparseMatrix<double> > >::type M(MSEXP);
+    Rcpp::traits::input_parameter< double >::type multiplier(multiplierSEXP);
+    rcpp_result_gen = Rcpp::wrap(wrapper_3(M, multiplier));
+    return rcpp_result_gen;
+END_RCPP
+}
+// wrapper_4
+Eigen::SparseMatrix<double> wrapper_4(const Eigen::Map<Eigen::MatrixXd> M, double multiplier);
+RcppExport SEXP _gconcord_wrapper_4(SEXP MSEXP, SEXP multiplierSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const Eigen::Map<Eigen::MatrixXd> >::type M(MSEXP);
+    Rcpp::traits::input_parameter< double >::type multiplier(multiplierSEXP);
+    rcpp_result_gen = Rcpp::wrap(wrapper_4(M, multiplier));
+    return rcpp_result_gen;
+END_RCPP
+}
+// wrapper_5
+void wrapper_5(Eigen::Map<Eigen::MatrixXd> M, Eigen::Map<Eigen::SparseMatrix<double> > Msp, double multiplier);
+RcppExport SEXP _gconcord_wrapper_5(SEXP MSEXP, SEXP MspSEXP, SEXP multiplierSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Eigen::Map<Eigen::MatrixXd> >::type M(MSEXP);
+    Rcpp::traits::input_parameter< Eigen::Map<Eigen::SparseMatrix<double> > >::type Msp(MspSEXP);
+    Rcpp::traits::input_parameter< double >::type multiplier(multiplierSEXP);
+    wrapper_5(M, Msp, multiplier);
+    return R_NilValue;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_gconcord_myfunc_wrapper", (DL_FUNC) &_gconcord_myfunc_wrapper, 2},
     {"_gconcord_qwer", (DL_FUNC) &_gconcord_qwer, 2},
+    {"_gconcord_wrapper_1", (DL_FUNC) &_gconcord_wrapper_1, 2},
+    {"_gconcord_wrapper_2", (DL_FUNC) &_gconcord_wrapper_2, 2},
+    {"_gconcord_wrapper_3", (DL_FUNC) &_gconcord_wrapper_3, 2},
+    {"_gconcord_wrapper_4", (DL_FUNC) &_gconcord_wrapper_4, 2},
+    {"_gconcord_wrapper_5", (DL_FUNC) &_gconcord_wrapper_5, 3},
     {NULL, NULL, 0}
 };
 

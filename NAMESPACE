@@ -2,6 +2,11 @@
 
 export(myfunc_wrapper)
 export(qwer)
+export(wrapper_1)
+export(wrapper_2)
+export(wrapper_3)
+export(wrapper_4)
+export(wrapper_5)
 import(RcppEigen)
 importFrom(Rcpp,sourceCpp)
 useDynLib(gconcord, .registration = TRUE)
