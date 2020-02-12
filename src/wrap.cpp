@@ -1,9 +1,5 @@
-#include <iostream>
 #include <RcppEigen.h>
 #include "core.hpp"
-
-typedef Eigen::MappedSparseMatrix< double > MappedSparseMatrix ;
-typedef Eigen::Map< Eigen::MatrixXd > MappedMatrix ;
 
 // [[Rcpp::depends(RcppEigen)]]
 
